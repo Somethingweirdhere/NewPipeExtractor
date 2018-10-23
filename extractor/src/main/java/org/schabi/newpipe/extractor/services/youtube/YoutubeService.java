@@ -106,6 +106,67 @@ public class YoutubeService extends StreamingService {
                             new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
                 }
             }, new YoutubeTrendingLinkHandlerFactory(), "Trending");
+
+            list.addKioskEntry(new KioskList.KioskExtractorFactory() {
+                @Override
+                public KioskExtractor createNewKiosk(StreamingService streamingService,
+                                                     String url,
+                                                     String id,
+                                                     Localization local)
+                        throws ExtractionException {
+                    return new YoutubeTrendingExtractor(YoutubeService.this,
+                            new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
+                }
+            }, new YoutubeTrendingLinkHandlerFactory(), "Music");
+
+            list.addKioskEntry(new KioskList.KioskExtractorFactory() {
+                @Override
+                public KioskExtractor createNewKiosk(StreamingService streamingService,
+                                                     String url,
+                                                     String id,
+                                                     Localization local)
+                        throws ExtractionException {
+                    return new YoutubeTrendingExtractor(YoutubeService.this,
+                            new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
+                }
+            }, new YoutubeTrendingLinkHandlerFactory(), "Live");
+
+            list.addKioskEntry(new KioskList.KioskExtractorFactory() {
+                @Override
+                public KioskExtractor createNewKiosk(StreamingService streamingService,
+                                                     String url,
+                                                     String id,
+                                                     Localization local)
+                        throws ExtractionException {
+                    return new YoutubeTrendingExtractor(YoutubeService.this,
+                            new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
+                }
+            }, new YoutubeTrendingLinkHandlerFactory(), "Gaming");
+
+            list.addKioskEntry(new KioskList.KioskExtractorFactory() {
+                @Override
+                public KioskExtractor createNewKiosk(StreamingService streamingService,
+                                                     String url,
+                                                     String id,
+                                                     Localization local)
+                        throws ExtractionException {
+                    return new YoutubeTrendingExtractor(YoutubeService.this,
+                            new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
+                }
+            }, new YoutubeTrendingLinkHandlerFactory(), "News");
+
+            list.addKioskEntry(new KioskList.KioskExtractorFactory() {
+                @Override
+                public KioskExtractor createNewKiosk(StreamingService streamingService,
+                                                     String url,
+                                                     String id,
+                                                     Localization local)
+                        throws ExtractionException {
+                    return new YoutubeTrendingExtractor(YoutubeService.this,
+                            new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
+                }
+            }, new YoutubeTrendingLinkHandlerFactory(), "Movies");
+
             list.setDefaultKiosk("Trending");
         } catch (Exception e) {
             throw new ExtractionException(e);
