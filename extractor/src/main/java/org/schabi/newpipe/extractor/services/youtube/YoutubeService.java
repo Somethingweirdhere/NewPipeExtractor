@@ -101,7 +101,7 @@ public class YoutubeService extends StreamingService {
                                                      String url,
                                                      String id,
                                                      Localization local)
-                throws ExtractionException {
+                        throws ExtractionException {
                     return new YoutubeTrendingExtractor(YoutubeService.this,
                             new YoutubeTrendingLinkHandlerFactory().fromUrl(url), id, local);
                 }
