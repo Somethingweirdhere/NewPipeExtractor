@@ -102,8 +102,10 @@ public  class KioskList {
             throws ExtractionException, IOException {
         for(Map.Entry<String, KioskEntry> e : kioskList.entrySet()) {
             KioskEntry ke = e.getValue();
-            if(ke.handlerFactory.acceptUrl(url)) {
-                return getExtractorById(e.getKey(), nextPageUrl, localization);
+            if(ke.handlerFactory.getId(url).equals(e.getKey())) {
+                if (ke.handlerFactory.acceptUrl(url)) {
+                    return getExtractorById(e.getKey(), nextPageUrl, localization);
+                }
             }
         }
         throw new ExtractionException("Could not find a kiosk that fits to the url: " + url);
