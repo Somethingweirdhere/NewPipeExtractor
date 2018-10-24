@@ -41,11 +41,13 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
 
     @Override
     public String getId(String url) {
-        return "Trending";
+        //return "Trending";
+        return "Movies";
     }
 
     @Override
     public boolean onAcceptUrl(final String url) {
-        return Parser.isMatch("^(https://|http://|)(www.|m.|)youtube.com/feed/trending(|\\?.*)$", url);
+        //return Parser.isMatch("^(https://|http://|)(www.|m.|)youtube.com/feed/trending(|\\?.*)$", url);
+        return true;
     }
 }
