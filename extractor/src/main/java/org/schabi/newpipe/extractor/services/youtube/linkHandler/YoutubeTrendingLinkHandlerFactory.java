@@ -41,7 +41,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
 
     @Override
     public String getId(String url) {
-        return "Trending";
+        return "Movies";
     }
 
     @Override
