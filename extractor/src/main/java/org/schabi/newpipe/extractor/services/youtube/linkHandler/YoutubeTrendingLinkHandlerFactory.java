@@ -29,7 +29,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
 
     public String getUrl(String id, List<String> contentFilters, String sortFilter) {
         switch(id) {
-            case "Trending": return "https://www.youtube.com/feed/trending";
+            case "Trending": return "crash";
             case "Music": return "https://soundcloud.com/charts/top";
             case "Live": return "crash";
             case "Gaming": return "https://www.youtube.com/feed/trending?bp=4gIvCgkvbS8wYnp2bTISIlBMaUN2Vkp6QnVwS2xGWkJHOXVVdUJUY1pJYmE2TnlzeXc%3D";
