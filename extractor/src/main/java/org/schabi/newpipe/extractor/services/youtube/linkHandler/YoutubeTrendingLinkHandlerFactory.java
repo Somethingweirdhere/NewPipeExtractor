@@ -33,7 +33,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
             case "Music": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D";
             case "Live": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNzM1bBIiUExVMTJ1SVR4QkVQRmtKRFdtYUs5QUV1aVNEUk1OeXdzQw%3D%3D";
             case "Gaming": return "https://www.youtube.com/feed/trending?bp=4gIvCgkvbS8wYnp2bTISIlBMaUN2Vkp6QnVwS2xGWkJHOXVVdUJUY1pJYmE2TnlzeXc%3D";
-            case "Movies": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wMnZ4bhIiUExuUzZNOHZRRmtkSjlWT1JPbVd5bmFxVnhvcnlRV3dlSg%3D%3D";
+            case "Movies": return "https://goo.gl/vNhwPZ";
             case "News": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNWpoZxIiUEwzWlE1Q3BOdWxRa2lqaUkwSWxMc0I0R3NQWjhUNVlDZA%3D%3D";
             default: return null;
         }
