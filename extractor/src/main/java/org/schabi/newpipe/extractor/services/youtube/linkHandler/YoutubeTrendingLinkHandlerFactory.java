@@ -32,7 +32,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
             case "Trending": return "https://www.youtube.com/feed/trending";
             case "Music": return "https://bit.ly/2CCie5E";
             case "Live": return "https://bit.ly/2OKDQE9";
-            case "Gaming": return "https://bit.ly/2R9m4Hm";
+            case "Gaming": return "https://bit.ly/2Rc0q5h";
             case "Movies": return "https://bit.ly/2AqjBCN";
             case "News": return "https://bit.ly/2D4bkat";
             default: return null;
@@ -44,7 +44,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
         switch (url) {
             case "https://bit.ly/2CCie5E": return "Music";
             case "https://bit.ly/2OKDQE9": return "Live";
-            case "https://bit.ly/2R9m4Hm": return "Gaming";
+            case "https://bit.ly/2Rc0q5h": return "Gaming";
             case "https://bit.ly/2AqjBCN": return "Movies";
             case "https://bit.ly/2D4bkat": return "News";
             default: return "Trending";
