@@ -30,8 +30,8 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
     public String getUrl(String id, List<String> contentFilters, String sortFilter) {
         switch(id) {
             case "Trending": return "https://www.youtube.com/feed/trending";
-            case "Music": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D";
-            case "Live": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNzM1bBIiUExVMTJ1SVR4QkVQRmtKRFdtYUs5QUV1aVNEUk1OeXdzQw%3D%3D";
+            case "Music": return "https://soundcloud.com/charts/top";
+            case "Live": return "crash";
             case "Gaming": return "https://www.youtube.com/feed/trending?bp=4gIvCgkvbS8wYnp2bTISIlBMaUN2Vkp6QnVwS2xGWkJHOXVVdUJUY1pJYmE2TnlzeXc%3D";
             case "Movies": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wMnZ4bhIiUExuUzZNOHZRRmtkSjlWT1JPbVd5bmFxVnhvcnlRV3dlSg%3D%3D";
             case "News": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNWpoZxIiUEwzWlE1Q3BOdWxRa2lqaUkwSWxMc0I0R3NQWjhUNVlDZA%3D%3D";
@@ -41,8 +41,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
 
     @Override
     public String getId(String url) {
-        //return "Trending";
-        return "Movies";
+        return "Trending";
     }
 
     @Override
