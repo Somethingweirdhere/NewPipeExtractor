@@ -29,19 +29,26 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
 
     public String getUrl(String id, List<String> contentFilters, String sortFilter) {
         switch(id) {
-            case "Trending": return "crash";
-            case "Music": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D";
-            case "Live": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNzM1bBIiUExVMTJ1SVR4QkVQRmtKRFdtYUs5QUV1aVNEUk1OeXdzQw%3D%3D";
-            case "Gaming": return "https://www.youtube.com/feed/trending?bp=4gIvCgkvbS8wYnp2bTISIlBMaUN2Vkp6QnVwS2xGWkJHOXVVdUJUY1pJYmE2TnlzeXc%3D";
-            case "Movies": return "https://goo.gl/vNhwPZ";
-            case "News": return "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNWpoZxIiUEwzWlE1Q3BOdWxRa2lqaUkwSWxMc0I0R3NQWjhUNVlDZA%3D%3D";
+            case "Trending": return "https://www.youtube.com/feed/trending";
+            case "Music": return "https://bit.ly/2CCie5E";
+            case "Live": return "https://bit.ly/2OKDQE9";
+            case "Gaming": return "https://bit.ly/2R9m4Hm";
+            case "Movies": return "https://bit.ly/2AqjBCN";
+            case "News": return "https://bit.ly/2D4bkat";
             default: return null;
         }
     }
 
     @Override
     public String getId(String url) {
-        return "Movies";
+        switch (url) {
+            case "https://bit.ly/2CCie5E": return "Music";
+            case "https://bit.ly/2OKDQE9": return "Live";
+            case "https://bit.ly/2R9m4Hm": return "Gaming";
+            case "https://bit.ly/2AqjBCN": return "Movies";
+            case "https://bit.ly/2D4bkat": return "News";
+            default: return "Trending";
+        }
     }
 
     @Override
