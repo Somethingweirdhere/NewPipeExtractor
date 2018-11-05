@@ -34,7 +34,7 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
             case "Trending": return "https://www.youtube.com/feed/trending";
             case "Music":
                 try {
-                    return "https://www.youtube.com/feed/trending" + "?bp=" + URLEncoder.encode("4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D", "UTF-8");
+                    return "https://www.youtube.com/feed/trending" + URLEncoder.encode("?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D", "UTF-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
