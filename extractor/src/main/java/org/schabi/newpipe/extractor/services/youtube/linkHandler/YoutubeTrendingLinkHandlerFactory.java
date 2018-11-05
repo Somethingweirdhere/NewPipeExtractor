@@ -23,6 +23,8 @@ package org.schabi.newpipe.extractor.services.youtube.linkHandler;
 import org.schabi.newpipe.extractor.linkhandler.ListLinkHandlerFactory;
 import org.schabi.newpipe.extractor.utils.Parser;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
@@ -30,7 +32,12 @@ public class YoutubeTrendingLinkHandlerFactory extends ListLinkHandlerFactory {
     public String getUrl(String id, List<String> contentFilters, String sortFilter) {
         switch(id) {
             case "Trending": return "https://www.youtube.com/feed/trending";
-            case "Music": return "https://www.youtube.com/feed/trending" + "?bp=" + "4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D";
+            case "Music":
+                try {
+                    return "https://www.youtube.com/feed/trending" + "?bp=" + URLEncoder.encode("4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbUxKTVppZ1N5TFpsUmV2UUhlcVBsaA%3D%3D", "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
             case "Live": return "https://bit.ly/2OKDQE9";
             case "Gaming": return "https://bit.ly/2Rc0q5h";
             case "Movies": return "https://bit.ly/2AqjBCN";
